@@ -1,0 +1,91 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+body {
+    font-family: poppins;
+    font-size: 1.2rem;
+    background-color: #212121;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.home .top-song {
+    margin: 50px;
+    margin-left: 0px;
+}
+
+.home .top-song img {
+    max-width: 754.6px;
+    height: 420.2px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 5px 5px #181A18;
+}
+
+.home .top-charts {
+    max-width: 500px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.home .top-charts p {
+    margin: 0px;
+    font-size: 1.8rem;
+    color: azure;
+}
+
+/* .song-1 .desc .song-name, .song-1 .desc .author, .song-1 .desc .dur {
+    margin-top: 5px;
+    margin-left: 8px;
+} */
+
+.song-1 .desc, .song-2 .desc, .song-3 .desc {
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+.song-1 .desc .song-name, .song-2 .desc .song-name, .song-3 .desc .song-name {
+    cursor: pointer;
+}
+ 
+.song-1 .desc .author, .song-2 .desc .author, .song-3 .desc .author {
+    font-size: 0.8rem;
+    margin-top: -5px;
+    font-weight: 300;
+    opacity: 0.8;
+    /* cursor: pointer; */
+    background-color: red;
+}
+
+.song-1 .desc .dur, .song-2 .desc .dur, .song-3 .desc .dur {
+    font-size: 0.8rem;
+    font-weight: 300;
+    cursor: pointer;
+    background-color: green;
+}
+
+.song-1, .song-2, .song-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    background-color: #181A18;
+    border-radius: 20px;
+    padding: 8px;
+    /* padding-right: 50px; */
+    width: 450px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.song-1 img, .song-2 img, .song-3 img {
+    max-width: 94.67px;
+    max-height: 96.33px;
+    scale: 0.9;
+    /* margin-left: 20px; */
+    border-radius: 15px;
+}
