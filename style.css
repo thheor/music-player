@@ -1,91 +1,171 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
-
 body {
-    font-family: poppins;
+    font-family: 'poppins';
     font-size: 1.2rem;
-    background-color: #212121;
-}
-
-.home {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.home .top-song {
-    margin: 50px;
-    margin-left: 0px;
-}
-
-.home .top-song img {
-    max-width: 754.6px;
-    height: 420.2px;
-    border-radius: 40px;
-    box-shadow: 0px 0px 5px 5px #181A18;
-}
-
-.home .top-charts {
-    max-width: 500px;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-}
-
-.home .top-charts p {
-    margin: 0px;
-    font-size: 1.8rem;
-    color: azure;
-}
-
-/* .song-1 .desc .song-name, .song-1 .desc .author, .song-1 .desc .dur {
-    margin-top: 5px;
-    margin-left: 8px;
-} */
-
-.song-1 .desc, .song-2 .desc, .song-3 .desc {
-    margin-top: 5px;
-    margin-left: 8px;
-}
-
-.song-1 .desc .song-name, .song-2 .desc .song-name, .song-3 .desc .song-name {
-    cursor: pointer;
+    background-color: #04091d;
 }
  
-.song-1 .desc .author, .song-2 .desc .author, .song-3 .desc .author {
-    font-size: 0.8rem;
-    margin-top: -5px;
-    font-weight: 300;
-    opacity: 0.8;
-    /* cursor: pointer; */
-    background-color: red;
+.container {
+    display: grid;
+    margin: 50px 80px;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 50px;
 }
 
-.song-1 .desc .dur, .song-2 .desc .dur, .song-3 .desc .dur {
-    font-size: 0.8rem;
-    font-weight: 300;
-    cursor: pointer;
-    background-color: green;
+.header img {
+    margin-top: 12px;
+    width: 720.3px;
+    height: 401.1px;
+    border-radius: 50px;
+    transition: 0.5s ease;
+}
+
+.header img:hover {
+    scale: 1.01;
+}
+
+.top-charts {
+    margin-left: 80px;
+}
+
+.top-charts h2, .new-release h2 {
+    color: #daf5ff;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.song-1 img, .song-2 img, .song-3 img {
+    max-width: 113.6px;
+    max-height: 115.6px;
+    scale: 0.8;
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+
+.top-charts img:hover {
+    scale: 0.85;
 }
 
 .song-1, .song-2, .song-3 {
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    background-color: #181A18;
+    margin: 8px;
     border-radius: 20px;
-    padding: 8px;
-    /* padding-right: 50px; */
-    width: 450px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
+    background-color: #0f2a3d;
 }
 
-.song-1 img, .song-2 img, .song-3 img {
-    max-width: 94.67px;
-    max-height: 96.33px;
-    scale: 0.9;
-    /* margin-left: 20px; */
-    border-radius: 15px;
+.song-1 .desc, .song-2 .desc, .song-3 .desc {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 120px;
+    max-width: 500px;
+}
+
+.song-1 .desc p, .song-2 .desc p, .song-3 .desc p {
+    font-size: 1rem;
+    color: #daf5ff;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.song-1 .desc p:hover, .song-2 .desc p:hover, .song-3 .desc p:hover {
+    filter: brightness(50%);
+}
+
+.new-songs p {
+    font-size: 1rem;
+    color: #daf5ff;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.new-songs p:hover {
+    filter: brightness(50%);
+}
+
+.new-release {
+    margin-top: -20px;
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.new-songs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.new-songs img {
+    max-width: 185px;
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+
+.new-songs img:hover {
+    scale: 1.03;
+}
+
+.music-play {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: green;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(218, 245, 255, 0.2);
+}
+
+.player-progress {
+    background-color: #daf5ff;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+    height: 6px;
+    width: 70%;
+}
+
+.progress {
+    cursor: pointer;
+    background-color: #04091d;
+    border-radius: 10px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.music-duration {
+    display: flex;
+    justify-content: space-between;
+    color: #daf5ff;
+    margin-top: 5px;
+}
+
+.music-duration span {
+    cursor: pointer;
+}
+
+.player-controls {
+    display: flex;
+    width: 10%;
+    margin: auto;
+    top: 20px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.fa-solid {
+    color: #daf5ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fa-solid:hover {
+    filter: brightness(50%);
+}
+
+footer {
+    height: 100px;
+    width: 100%;
 }
