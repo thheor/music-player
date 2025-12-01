@@ -165,7 +165,25 @@ body {
     filter: brightness(50%);
 }
 
+.cover-play {
+    position: absolute;
+    left: 80px;
+    bottom: 10px;
+    height: 80px;
+    width: 80px;
+}
+
+.cover-play img {
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
+    transition: 0.2s ease;
+}
+
+.cover-play img:hover {
+    scale: 1.03;
+}
 footer {
-    height: 100px;
+    height: 70px;
     width: 100%;
 }
