@@ -1,4 +1,6 @@
-const title = document.getElementById('title'),
+const title1 = document.getElementById('title-1'),
+      title2 = document.getElementById('title-2'),
+      title3 = document.getElementById('title-3'),
       artist = document.getElementById('artist'),
       prevBtn = document.getElementById('prev'),
       playBtn = document.getElementById('play'),
@@ -6,8 +8,9 @@ const title = document.getElementById('title'),
       cover = document.getElementById('cover');
 
 let isPlaying = false;
+let musicIndex = 0;
 
-const music = new Audio('src/songs/sunflower.mp3');
+const music = new Audio();
 
 const songs = [
     {
@@ -24,39 +27,58 @@ const songs = [
     }
 ]
 
-playBtn.addEventListener("click", togglePlay);
+// title.addEventListener("click", changeCover(songs));
 
-function test(){
+function togglePlay(song){
     if(isPlaying){
-        music.pause();
+        pauseSong();
     } else {
+        playSong();
     }
 }
 
-function togglePlay(){
+function topMusic(song){
     if(isPlaying){
         pauseSong();
         music.pause();
     } else {
-        playSong();
+        loadMusic(song);
         music.play();
+        playSong(song);
     }
 }
 
 function playSong(){
     isPlaying = true;
+    
     playBtn.classList.replace('fa-play', 'fa-pause');
     playBtn.setAttribute('title', 'Pause');
-    // loadMusic(songs);
+    music.play();
 }
 
 function pauseSong(){
     isPlaying = false;
     playBtn.classList.replace('fa-pause', 'fa-play');
     playBtn.setAttribute('title', 'Play');
+    music.pause();
 }
 
 function loadMusic(song){
     music.src = song.path;
     cover.src = song.cover;
 }
+
+function changeMusic(direction){
+    musicIndex = (musicIndex + direction + songs.length) % songs.length;
+    loadMusic(songs[musicIndex]);
+    playSong();
+}
+
+title1.addEventListener("click", () => topMusic(songs[0]));
+title2.addEventListener("click", () => topMusic(songs[1]));
+title3.addEventListener("click", () => topMusic(songs[2]));
+playBtn.addEventListener("click", () => togglePlay(songs[1]));
+prevBtn.addEventListener("click", () => changeMusic(-1));
+nextBtn.addEventListener("click", () => changeMusic(1));
+window.addEventListener('keydown', music.pause());
+// prevBtn.addEventListener("click", () => changeMusic(-1));
