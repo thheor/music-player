@@ -5,7 +5,8 @@ const title1 = document.getElementById('title-1'),
       prevBtn = document.getElementById('prev'),
       playBtn = document.getElementById('play'),
       nextBtn = document.getElementById('next'),
-      cover = document.getElementById('cover');
+      cover = document.getElementById('cover'),
+      playMsc = document.getElementById('music-play');
 
 let isPlaying = false;
 let musicIndex = 0;

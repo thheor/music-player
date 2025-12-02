@@ -107,6 +107,7 @@ body {
 }
 
 .music-play {
+    display: none;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -123,7 +124,7 @@ body {
     margin: auto;
     margin-top: 20px;
     height: 6px;
-    width: 70%;
+    width: 50%;
 }
 
 .progress {
@@ -183,6 +184,26 @@ body {
 .cover-play img:hover {
     scale: 1.03;
 }
+
+.cover-play .play-title {
+    position: inherit;
+    color: #daf5ff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    top: -10px;
+    left: 95px;
+}
+
+.cover-play .play-artist {
+    position: inherit;
+    top: 20px;
+    /* margin-top: 30px; */
+    left: 95px;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #daf5ff;
+}
+
 footer {
     height: 70px;
     width: 100%;
