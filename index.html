@@ -78,12 +78,17 @@
     </div>
 
     <div class="music-play" id="music-play">
+        <div class="player-controls">
+            <i class="fa-solid fa-backward-step" title="backward" id="prev"></i>
+            <i class="fa-solid fa-play" title="play" id="play"></i>
+            <i class="fa-solid fa-forward-step" title="forward" id="next"></i>
+        </div>
+        <div class="music-duration" id="music-duration">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
         <div class="player-progress" id="player-progress">
             <div class="progress" id="progress"></div>
-            <div class="music-duration" id="music-duration">
-                <span id="current-time">0:00</span>
-                <span id="duration">0:00</span>
-            </div>
         </div>
 
         <div class="cover-play" id="cover-play">
@@ -91,14 +96,9 @@
             <p class="play-title" id="play-title">Sunflower</p>
             <p class="play-artist" id="play-artist">Sunflower</p>
         </div>
-        <div class="player-controls">
-            <i class="fa-solid fa-backward-step" title="backward" id="prev"></i>
-            <i class="fa-solid fa-play" title="play" id="play"></i>
-            <i class="fa-solid fa-forward-step" title="forward" id="next"></i>
-        </div>
     </div>
     
-    <footer>
+    <footer id="footer">
 
     </footer>
     <script src="script.js"></script>

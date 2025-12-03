@@ -122,7 +122,7 @@ body {
     background-color: #daf5ff;
     border-radius: 10px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 5px;
     height: 6px;
     width: 50%;
 }
@@ -137,10 +137,13 @@ body {
 }
 
 .music-duration {
+    font-size: 1rem;
     display: flex;
+    width: 50%;
+    margin: auto;
     justify-content: space-between;
     color: #daf5ff;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .music-duration span {
@@ -190,21 +193,23 @@ body {
     color: #daf5ff;
     font-size: 1.1rem;
     font-weight: 500;
-    top: -10px;
+    top: -15px;
     left: 95px;
+    width: 300px;
 }
 
 .cover-play .play-artist {
     position: inherit;
     top: 20px;
-    /* margin-top: 30px; */
+    width: 200px;
     left: 95px;
     font-weight: 300;
     font-size: 0.8rem;
     color: #daf5ff;
 }
 
-footer {
-    height: 70px;
+#footer {
+    /* display: none; */
+    height: 60px;
     width: 100%;
 }
