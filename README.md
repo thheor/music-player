@@ -7,7 +7,7 @@ Music player with HTML, CSS, and JavaScript
 - Music progress
 
 ## Demo
-You visit the website by clicking this [LINK](https://thheor.github.io/music-player/)
+You can visit the website by clicking this [LINK](https://thheor.github.io/music-player/)
 
 ## Screenshot
 Here is the screenshot project:
