@@ -6,4 +6,6 @@ Music player with HTML, CSS, and JavaScript
 - Top charts music
 - Music progress
 
-## ScreenShot
+## Screenshot
+Here is the screenshot project:
+![screenshot](https://github.com/thheor/music-player/blob/master/screenshot.png?raw=true)
